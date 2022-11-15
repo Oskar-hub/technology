@@ -482,9 +482,12 @@ h1{
 }
 
 
-@media only screen and (max-width: 800px) {
-
+@media only screen and (max-width: 500px) {
+  *{
+    transition: 2s;
+  }
   .container{
+    width: 500px;
     flex-direction: column;
   }
   .logo{
