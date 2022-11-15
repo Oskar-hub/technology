@@ -489,6 +489,7 @@ h1{
   .container{
     width: 500px;
     flex-direction: column;
+    justify-content: center;
   }
   .logo{
     height: 100px;
@@ -506,30 +507,15 @@ h1{
     left: 6.5%;
   }
   .info-box{
-    width: 100%;
+    width: 550px;
     height: 700px;
     flex-direction: column;
-    justify-content: start;
-    position: absolute;
-    left: 20%;
-  }
-  .section{
-    height: 20px;
-    font-size: 15px;
+    justify-content: center;
+    border: 1px solid black;
   }
 
-  .active{
-    width: 250px;
-    height: 700px;
-  }
-  
-  h1{
-    font-size: 10px;
-    height: 20px;
-  }
-  .click{
-    width: 200px;
-    
+  .info{
+    display: none;
   }
 
 
