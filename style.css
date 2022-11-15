@@ -509,6 +509,10 @@ h1{
     margin-right: auto;
   }
 
+  .main{
+    display: none;
+  }
+
 }
 
 
