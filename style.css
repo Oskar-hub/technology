@@ -7,6 +7,15 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+.unmask{
+  transition: 1.5s;
+  transform: translateX(-2000px) rotate(40deg);
+}
+.unmask-active{
+  transform: translateX(0px);
+}
+
+
 /*start*/
 .container {
     display: flex;
@@ -23,7 +32,6 @@
     display: inline-block;
     width: 500px;
     height: 700px;
-    
 }
 
 #text, #text1{
@@ -41,7 +49,26 @@
     display: flex;
     width: 710px;
     height: 700px;
+    animation: down 3s linear;
 }
+@keyframes down{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0.3;
+  }
+  50%{
+    opacity: 0.6;
+  }
+  75%{
+    opacity: 0.9;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 
 .case{
     width: 300px;
@@ -54,6 +81,7 @@
     background-color: white;
 }
 
+
 .date-container{
     display: flex;
     justify-content: space-between;
@@ -62,6 +90,58 @@
     border-radius: 25%;
     position: absolute;
     padding: 10px;
+    top: -5px;
+}
+.speaker{
+  width: 100px;
+  height: 25px;
+  background-color: #000813;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  position: absolute;
+  top: 1px;
+  left: 35%;
+}
+.internet{
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  left: 85%;
+}
+.internet::before{
+  position: absolute;
+  top: 2px;
+  content: "LTE";
+  font-size: 10px;
+}
+.internet::after{
+  content: "";
+  width: 1px;
+  height: 5px;
+  border: 1px solid black;
+  background-color: #000813;
+  position: absolute;
+  left: -6px;
+  top: 4px;
+}
+.range{
+  width: 3px;
+  height: 5px;
+  border: 1px solid black;
+  background-color: #000813;
+  position: absolute;
+  left: 81.25%;
+  top: 16px;
+}
+.range::before{
+  content: "";
+  width: 1px;
+  height: 1px;
+  border: 1px solid black;
+  background-color: #000813;
+  position: absolute;
+  left: -5px;
+  top: 1px;
 }
 
 .battery{
@@ -70,6 +150,7 @@
     border: 1px solid black;
     border-radius: 15%;
     background-color: rgb(56, 241, 0);
+    transform: rotate(90deg);
 }
 
 .battery::before{
@@ -91,6 +172,37 @@
     width: 95%;
     height: 60%;
     background-color: var(--color);
+}
+
+.arrow-back{
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.356);
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
+.arrow-back::after{
+  content: "";
+  width: 12px;
+  height: 15px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.356);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transform: rotate(30deg);
+}
+
+.arrow-back::before{
+  content: "";
+  width: 12px;
+  height: 15px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.356);
+  position: absolute;
+  top: -4px;
+  left: -5px;
+  transform: rotate(-30deg);
 }
 
 .app{
@@ -117,6 +229,7 @@ strong{
   top: 50%;
   padding: 5px;
   font-size: 20px;
+  font-family: 'Patrick Hand', cursive;
 }
 
 .switch{
@@ -344,21 +457,46 @@ p{
 
 .navigation{
   display: flex;
+  justify-content: space-between;
   width: 90%;
   height: 120px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 70px;
+  border-radius: 20px;
+  background-color: rgba(0, 153, 255, 0.562);
+}
+.looking{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #00132C;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.map{
+  z-index: 1;
+  position: relative;
+  top: 30px;
+  left: 0px;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 20px;
+  opacity: 0.7;
+}
+.looking:hover{
+  padding: 4px;
+  transition: 1s;
+}
+.map:hover{
+  opacity: 1;
+  transition: 2s;
 }
 
-.navigation button{
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 25%;
-  width: 120px;
-  height: 30px;
-}
+
 /*end section 1*/
 
 /*start section 2*/
@@ -376,7 +514,6 @@ p{
     top: 50px;
     width: 1520px;
     height: 720px;
-   
 }
 
 .smartHome{
@@ -399,13 +536,65 @@ p{
   left: 20%;
 }
 
+.cloud{
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  box-shadow: 0px -5px 9px 2px rgba(255, 255, 255, 0.562);
+  animation: move 15s linear infinite;
+}
+.cloud::after{
+  content: "";
+  width: 30px;
+  height: 20px;
+  background-color: white; 
+  border-radius: 20px;
+  transform: rotate(40deg);
+  position: absolute;
+  top: -25%;
+  right: 25px;
+}
+.cloud::before{
+  content: "";
+  width: 35px;
+  height: 30px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top: -15px;
+  left: 20px;
+}
+
+.cloud:nth-child(2){
+  position: absolute;
+  top: 20%;
+  left: 120px;
+}
+
+@keyframes move {
+ 0%{
+  transform: translate(10px);
+ }
+ 50%{
+  transform: translate(-10px);
+ }
+ 100%{
+  transform: translate(10px);
+ }
+}
+
+
 .lawn{
   display: flex;
   z-index: 1;
   width: 550px;
   height: 20px;
-  border: 1px solid rgb(44, 207, 44);
-  background-color: rgb(44, 207, 44);
+  border: 1px solid rgb(24, 138, 24);
+  background-color: rgb(24, 138, 24);
   border-radius: 30px;
   position: absolute;
   top: 78%;
@@ -559,7 +748,6 @@ p{
 }
 
 
-
 .hand-right{
   width: 4px;
   height: 15px;
@@ -592,16 +780,15 @@ p{
   left: 11px;
 }
 
-
-
 .step-1{
+  display: 1;
+  z-index: 1;
   width: 190px;
   height: 10px;
   background-color: white;
   position: absolute;
   top: 77%;
   left: 32%;
-  box-shadow: 4px -27px 24px 0px rgba(66, 68, 90, 1);
 }
 .step-1::before{
   display: flex;
@@ -740,12 +927,13 @@ p{
 }
 .block::after{
   content: "";
-  width: 44px;
+  z-index: 0;
+  width: 45px;
   height: 15px;
   background-color: #f7c230;
   position: absolute;
   top: 5px;
-  left: -49%;
+  left: -49.5%;
 }
 .block::before{
   content: "";
@@ -838,6 +1026,7 @@ p{
   width: 68%;
   height: 2px;
   border: 1px solid #718093;
+  background-color: #718093;
   position: absolute;
   left: -20px;
   display: flex;
@@ -860,7 +1049,7 @@ p{
   clip-path: polygon(43% 3%, 94% 39%, 94% 74%, 10% 74%, 10% 36%);
   background-color: rgb(255, 255, 255);
   position: absolute;
-  top: 32.8%;
+  top: 33%;
   left: 333px;
 }
 .brink{
@@ -977,12 +1166,11 @@ h1{
   font-family: "Audiowide", sans-serif;
   font-size: 27px;
 }
-
-
 .section, .section-2{
   font-family: 'Work Sans', sans-serif;
   font-size: 38px;
 }
+
 
 .info{
     width: 30%;
@@ -1044,19 +1232,19 @@ h1{
 }
 
 .h2-2{
+  margin: 5px;
   position: absolute;
 }
 .adres{
+  margin: 5px;
   position: absolute;
   top: 40px;
 }
-
 
 .right-side{
   display: flex;
   height: 100%;
   width: 50%;
-  border: 1px solid black;
 }
 
 .section-2{

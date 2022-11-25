@@ -8,8 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <title>Document</title>
 </head>
 <body>
 
@@ -28,8 +31,13 @@
            <div class="case">
                     <div class="date-container">
                         <div class="date"></div>
+                        <div class="speaker"></div>
+                        <div class="internet"></div>
+                        <div class="range"></div>
                         <div class="battery"></div>
                     </div>
+
+                      <div class="arrow-back"></div>
                      
                         <div class="app-container">
 
@@ -72,10 +80,11 @@
                               </div>
                         </div>
                         <script src="phone.js"></script>
+
                         <div class="navigation">
-                          <button class="contact-way" href="#contact"><a>Kontakt</a></button>
-                          
-                          <button class="offer"><a>Oferta</a></button>
+                          <a href="https://goo.gl/maps/Go5xXfdQa2LD8XTRA" target="_blank" class="looking">Sprawdz </br> gdzie  </br> jestesmy!</a>
+                          <div class="icon-l"></div>
+                          <img src="map.png" class="map" width="130px" height="90px">
                         </div> 
             </div>
         </div>
@@ -84,16 +93,16 @@
 <div class="main">
     
   <h1 class="section">Oferty</h1> 
-  <div class="info-box"> 
+  <div class="info-box "> 
     
-    <div class="info">
+    <div class="info unmask">
       <h1>Hotel</h1>
       <button class="click"><a>Dowiedz sie więcej</a>  <section class="arrow">↓</class> </button>
       <div class="text">
       </div>
     </div>
 
-    <div class="info">
+    <div class="info unmask">
       <h1>Obiekty przemysłowe</h1>
       <button class="click"><a>Dowiedz sie więcej</a>  <section class="arrow">↓</class> </button>
       <div class="text">
@@ -101,7 +110,7 @@
       </div>
     </div>
 
-    <div class="info">
+    <div class="info unmask">
       <h1>Rezydencje</h1>
       <button class="click"><a>Dowiedz sie więcej</a> <section class="arrow">↓</section> </button>
       <div class="text">
@@ -109,10 +118,14 @@
       </div>
     </div>
 
-      <div class="smartHome">
-        <div class="half-circle"></div>
+      <div class="smartHome unmask">
+        <div class="half-circle">
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+        </div>
         <div class="lawn">
-
+        
+       
           <div class="tree"></div>
           <div class="tree"></div>
           <div class="tree"></div>
@@ -174,7 +187,7 @@
   <h1 class="section-2">Kontakt</h1>
   <div class="contact-container">
 
-    <div class="contact">
+    <div class="contact unmask">
 
         <div class="left-side">
 
@@ -191,7 +204,9 @@
 
         </div>
 
-        <div class="right-side"></div>
+        <div class="right-side">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.601251975952!2d18.8915170345138!3d50.262031243081175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716cd03393faa6d%3A0x94ee5b1a73e11efc!2sBarbary%2033%2C%2041-707%20Ruda%20%C5%9Al%C4%85ska!5e0!3m2!1spl!2spl!4v1669381875618!5m2!1spl!2spl" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        </div>
     </div>
 
   </div>
@@ -199,15 +214,7 @@
   <div class="footer">
 
   </div>
-
-  
- 
-
-
-
-  
-
-
+  <script src="app.js"></script>
 </div>    
 
 </body>
