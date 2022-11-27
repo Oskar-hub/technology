@@ -678,7 +678,6 @@ h1{
 
 @media only screen and (max-width: 1024px) {
   *{
-    transition: 1s;
     margin: 0;
   }
   .container{
@@ -710,70 +709,87 @@ h1{
   }
   .main{
     width: 100%;
-    height: 2000px;
-  }
-  .animation{
-    top: 450px;
-    left: 40%;
   }
   .info-box{
     width: 100%;
     height: 1000px;
-    flex-direction: column;
     left: 0;
     top: 0;
   }
-  .arrow{
-    transform: rotate(-90deg);
-  }
-  .click{
-    margin-top: 60px;
-    left: -90px;
-    top: -110px;
-  }
-  .click:hover{
-    left: -60px;
-  }
-  .active{
-    width: 100%;
-    height: 390px;
-  }
 
   h1{
-   font-size: 15px;
-   top: -35px;
-   left: -45px;
-  }
-
-  .section, .section-2{
-    visibility: visible;
+    font-size: 15px;
+    top: 15px;
   }
   .section{
-    left: -15px;
+    top: -20px;
   }
-  .section-2{
-    top: 1000px;
-    left: 40%;
+  .animation{
+    top: 250px;
   }
-  
-  .left-side{
+}
+
+@media only screen and (max-width: 726px){
+  body{
+    overflow-x: hidden;
+  }
+  .container{
     width: 100%;
-    height: 50%;
-    border: 1px solid;
+  }
+  .logo{
+    left: 0;
+  }
+  .animation{
+    display: none;
+  }
+  .click{
+    display: none;
+  }
+  .info{
+    width: 80%;
     position: absolute;
   }
-  .right-side{
-    position:absolute;
-    top: 50%;
-    width: 100%;
-    height: 50%;
+  .info:nth-child(2){
+    top: 300px;
   }
-  iframe{
-    width: 100%;
-    height: 100%;
+  .info:nth-child(3){
+    top: 600px;
+  }
+  .text{
+    padding: 5px;
+    display: block;
+    font-size: 15px;
+    background-color: rgba(0, 153, 255, 0.562);
+    box-shadow: 0px 4px 16px -1px rgba(66, 68, 90, 1);
+  }
+  h1{
+    font-size: 20px;
+    top: 30px;
+    z-index: 1;
   }
 
+  .section-2{
+   top: 900px;
+  }
+
+  .contact-container{
+    top: 950px;
+  }
+
+  .contact{
+    scale: 0.6;
+  }
+
+  .footer p{
+    left: 2px;
+  }
+
+
+
+
+
   
+
 }
 
 
