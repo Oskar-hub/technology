@@ -791,7 +791,7 @@ h1{
     top: 390px;
   }
   .info:nth-child(3){
-    top: 750px;
+    top: 790px;
   }
   .text{
     padding: 10px;
@@ -814,17 +814,17 @@ h1{
     z-index: 1;
   }
   .section-2{
-   top: 1000px;
+   top: 1200px;
   }
   .contact-container{
-    top: 1050px;
+    top: 1250px;
   }
   .contact{
     scale: 0.6;
   }
 
   .footer{
-    top: 1550px;
+    top: 1750px;
   }
 
   .footer p{
