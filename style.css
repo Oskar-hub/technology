@@ -44,7 +44,6 @@
     font-family: "Audiowide", sans-serif;
 }
 
-
 .phone-container{
     display: flex;
     width: 710px;
@@ -76,7 +75,7 @@
     border: 5px solid black;
     border-radius: 15px;
     position: relative;
-    left: 30%;
+    left: 40%;
     top: 10%;
     background-color: white;
 }
@@ -307,7 +306,7 @@ p{
 .tv::after {
   width: 20px;
   height: 2px;
-  background: currentColor;
+  background: black;
   border-radius: 10px;
   bottom: -6px;
   right: 9.5px
@@ -512,7 +511,7 @@ p{
     justify-content: center;
     position: absolute;
     top: 50px;
-    width: 1520px;
+    width: 1400px;
     height: 720px;
 }
 
@@ -579,7 +578,6 @@ h1{
   font-family: 'Work Sans', sans-serif;
   font-size: 38px;
 }
-
 .info{
     width: 30%;
     height: 100px;
@@ -590,10 +588,11 @@ h1{
 
 .active{
   z-index: 2;
-  width: 700px;
-  height: 700px;
+  width: 600px;
+  height: 600px;
   background-color: rgba(0, 153, 255, 0.897);
   box-shadow: 0px 4px 16px -1px rgba(66, 68, 90, 1);
+  border-radius: 20px;
   transition: 2s;
 }
 
@@ -607,10 +606,18 @@ h1{
 }
 
 .show{
-    display: block;
+    display: flex;
+    position: relative;
+    top: 0px;
+    padding: 10px;
     margin: 10px;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+.show strong{
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
 }
 
 .contact-container{
@@ -622,7 +629,6 @@ h1{
   width: 100%;
   height: 30%;
   background-color: rgba(18, 147, 233, 0.3);
-  backdrop-filter: blur(7.5px);
 }
 
 .contact{
@@ -667,7 +673,6 @@ h1{
   width: 100%;
   height: 50px;
   background-color: rgba(18, 147, 233, 0.3);
-  backdrop-filter: blur(7.5px);
 }
 .footer p{
   position: absolute;
@@ -681,40 +686,52 @@ h1{
     margin: 0;
   }
   .container{
-    width: 100%;
-    height: 1000px;
-    flex-direction: column;
+    width: 1024px;
+    height: 700px;
   }
   .logo{
     width: 100%;
     height: 100px;
     top: 0;
-    left: 30%;
+    left: 0%;
   }
   .textElement{
     width: 100%;
     height: 100px;
-    top: -25%;
+    position: absolute;
+    top: 20%;
+    scale: 0.8;
   }
   #text, #text1{
-    font-size: 20px;
+    position: absolute;
+    font-size: 30px;
+    left: 30px;
   }
   .phone-container{
     width: 100%;
   }
   .case{
     left: 0;
+    top: 100px;
     margin-left: auto;
     margin-right: auto;
+    scale: 0.7;
   }
   .main{
     width: 100%;
   }
   .info-box{
+    scale: 0.8;
     width: 100%;
     height: 1000px;
     left: 0;
     top: 0;
+  }
+  .show{
+    transform: scale(80%);
+  }
+  .text{
+    font-size: 18px;
   }
 
   h1{
@@ -727,17 +744,30 @@ h1{
   .animation{
     top: 250px;
   }
+
+  .contact{
+    scale: 0.7;
+  }
 }
 
-@media only screen and (max-width: 726px){
-  body{
+@media only screen and (max-width: 768px){
+  html{
     overflow-x: hidden;
   }
   .container{
-    width: 100%;
+    width: 768px;
+    flex-direction: column;
   }
   .logo{
     left: 0;
+    scale: 0.7;
+  }
+  .textElement{
+    top: 0%;
+    left: 25%;
+  }
+  #text, #text1{
+    font-size: 20px;
   }
   .animation{
     display: none;
@@ -749,49 +779,54 @@ h1{
     width: 80%;
     position: absolute;
   }
+  .info:nth-child(1){
+    top: -130px;
+  }
   .info:nth-child(2){
-    top: 300px;
+    top: 350px;
   }
   .info:nth-child(3){
-    top: 600px;
+    top: 700px;
   }
   .text{
-    padding: 5px;
+    padding: 10px;
+    font-weight: 600;
     display: block;
     font-size: 15px;
     background-color: rgba(0, 153, 255, 0.562);
     box-shadow: 0px 4px 16px -1px rgba(66, 68, 90, 1);
     scale: 0.9;
+    border-radius: 15px;
+  }
+  .text strong {
+    font-family: sans-serif;
+    position: absolute;
+    top: 0%;
   }
   h1{
     font-size: 17px;
     top: 30px;
     z-index: 1;
   }
-
   .section-2{
-   top: 900px;
+   top: 1000px;
   }
-
   .contact-container{
-    top: 950px;
+    top: 1050px;
   }
-
   .contact{
     scale: 0.6;
+  }
+
+  .footer{
+    top: 1550px;
   }
 
   .footer p{
     left: 2px;
   }
-
-
-
-
-
-  
-
 }
+
 
 
 
