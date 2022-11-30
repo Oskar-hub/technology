@@ -755,7 +755,7 @@ h1{
     overflow-x: hidden;
   }
   .container{
-    width: 768px;
+    width: 100%;
     flex-direction: column;
   }
   .logo{
@@ -767,7 +767,12 @@ h1{
     left: 25%;
   }
   #text, #text1{
+    top: 100px;
+    left: -15%;
     font-size: 20px;
+  }
+  .case{
+    top: -20px;
   }
   .animation{
     display: none;
